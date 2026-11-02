@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Ulang Tahun — Arya Rai Karna</title>
+  <meta name="description" content="Undangan Sweet Seventeen Arya Rai Karna" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1d3557;
+      --blue: #3b5c82;
+      --blue-soft: #7d9cbd;
+      --blue-pale: #eef3f9;
+      --line: #c9d7e6;
+      --white: #ffffff;
+      --text: #2a3a4d;
+      --muted: #7b8aa0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--text);
+      min-height: 100vh;
+      letter-spacing: .02em;
+    }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(175deg, var(--navy) 0%, #2b4d75 68%, #3b5c82 100%);
+      color: var(--white);
+      position: relative;
+      padding: 60px 24px;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 74px;
+      background: linear-gradient(var(--blue-soft), transparent);
+      opacity: .55;
+    }
+    .hero::before { top: 0; }
+    .hero::after { bottom: 0; background: linear-gradient(transparent, var(--blue-soft)); }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .42em;
+      font-size: .7rem;
+      font-weight: 400;
+      color: var(--blue-pale);
+      opacity: .85;
+    }
+    .hero .rule {
+      width: 1px; height: 56px; background: var(--blue-soft); opacity: .6; margin: 26px 0;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(2.8rem, 9vw, 4.4rem);
+      letter-spacing: .06em;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .hero h1 span { display: block; font-size: .42em; letter-spacing: .35em; opacity: .75; margin-bottom: 14px; font-weight: 400; }
+    .hero .seventeen {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--blue-pale);
+      margin-bottom: 30px;
+    }
+    .hero .date {
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: .78rem;
+      color: var(--blue-pale);
+      opacity: .85;
+      margin-bottom: 44px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 40px;
+      border: 1px solid var(--blue-soft);
+      background: transparent;
+      color: var(--white);
+      font-family: inherit;
+      font-size: .78rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: .25s ease;
+    }
+    .btn:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
+    .btn.solid { background: var(--navy); border-color: var(--navy); }
+    .btn.solid:hover { background: transparent; color: var(--navy); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 76px 0; }
+    section.tint { background: var(--blue-pale); }
+    .sec-eyebrow {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .4em;
+      font-size: .66rem;
+      color: var(--blue-soft);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(1.9rem, 6vw, 2.5rem);
+      letter-spacing: .08em;
+      text-align: center;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .divider {
+      width: 54px; height: 1px; background: var(--line);
+      margin: 0 auto 36px; position: relative;
+    }
+    .divider::after {
+      content: '◆';
+      position: absolute; top: -6px; left: 50%; transform: translateX(-50%);
+      font-size: .5rem; color: var(--blue-soft); background: inherit;
+      padding: 0 10px;
+    }
+    .tint .divider { background: var(--blue-soft); opacity: .5; }
+
+    /* ---------- MAP ---------- */
+    .map-frame {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 8px;
+      max-width: 480px;
+      margin: 26px auto 0;
+    }
+    .tint .map-frame { border-color: rgba(125, 156, 189, .35); }
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 270px;
+      border: 0;
+      filter: grayscale(.3) contrast(1.03) opacity(.92);
+    }
+    @media (max-width: 480px) { .map-frame iframe { height: 210px; } }
+
+    .lead {
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 2;
+      font-weight: 300;
+    }
+    .quote {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 30px 34px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.12rem;
+      line-height: 1.9;
+      color: var(--blue);
+      text-align: center;
+    }
+    .tint .quote { background: var(--white); }
+
+    /* ---------- DETAILS ---------- */
+    .details { display: grid; gap: 14px; max-width: 480px; margin: 0 auto; }
+    .detail-card {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 24px 28px;
+      text-align: center;
+    }
+    .tint .detail-card { border-color: rgba(125,156,189,.35); }
+    .detail-card .icon { display: none; }
+    .detail-card b {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .detail-card span {
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .center { text-align: center; }
+
+    /* ---------- COUNTDOWN ---------- */
+    .countdown { display: flex; gap: 1px; justify-content: center; max-width: 420px; margin: 0 auto; border: 1px solid var(--line); background: var(--line); }
+    .cd-box {
+      flex: 1;
+      background: var(--white);
+      padding: 26px 0;
+      text-align: center;
+    }
+    .cd-box b {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 2.1rem;
+      color: var(--navy);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .cd-box small {
+      font-size: .62rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ---------- RSVP FORM ---------- */
+    form { max-width: 440px; margin: 0 auto; display: grid; gap: 14px; }
+    input, select, textarea {
+      font-family: inherit;
+      font-weight: 300;
+      font-size: .92rem;
+      letter-spacing: .05em;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--white);
+      color: var(--text);
+      width: 100%;
+      outline: none;
+      transition: border-color .2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    select {
+      background-image: linear-gradient(45deg, transparent 49%, var(--blue-soft) 51%),
+                        linear-gradient(135deg, var(--blue-soft) 49%, transparent 51%);
+      background-position: calc(100% - 21px) calc(50% - 2px), calc(100% - 16px) calc(50% - 2px);
+      background-size: 5px 5px;
+      background-repeat: no-repeat;
+    }
+    input::placeholder, textarea::placeholder { color: #a9b6c6; }
+    textarea { resize: vertical; min-height: 90px; }
+    input:focus, select:focus { border-color: var(--blue); }
+    .success-msg {
+      text-align: center;
+      font-size: .82rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: none;
+    }
+
+    /* ---------- GUEST LIST ---------- */
+    .sheet-link {
+      text-align: center;
+      display: block;
+      margin: -14px auto 30px;
+      font-size: .74rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--blue-soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+      width: fit-content;
+    }
+    .sheet-link:hover { color: var(--blue); border-color: var(--blue-soft); }
+    .stats { display: flex; gap: 0; justify-content: center; max-width: 440px; margin: 0 auto 30px; border: 1px solid var(--line); background: var(--line); }
+    .stat {
+      flex: 1; text-align: center;
+      background: var(--white);
+      padding: 14px 10px;
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .stat b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--navy); letter-spacing: 0; margin-bottom: 2px; }
+    .guest-list { max-width: 480px; margin: 0 auto; display: grid; gap: 8px; }
+    .guest {
+      display: flex; justify-content: space-between; align-items: center; gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding: 15px 4px;
+    }
+    .guest:last-child { border-bottom: none; }
+    .guest .name { font-size: .95rem; font-weight: 400; letter-spacing: .05em; }
+    .guest .badge {
+      font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; white-space: nowrap;
+      color: var(--blue);
+    }
+    .guest .badge.all { color: var(--blue-soft); }
+    .guest .badge.no { color: var(--muted); }
+    .empty { text-align: center; color: var(--muted); font-size: .85rem; letter-spacing: .1em; }
+
+    /* ---------- MUSIC ---------- */
+    .music-btn {
+      position: fixed;
+      top: 18px; right: 18px;
+      z-index: 90;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .92);
+      color: var(--navy);
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(29, 53, 87, .12);
+      transition: .25s ease;
+    }
+    .music-btn:hover { border-color: var(--blue); }
+    .music-btn.playing { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .music-btn .note { display: block; }
+    .music-btn.playing .note { animation: spin 5s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- FOTO HERO (POLAROID) ---------- */
+    .hero-photo {
+      width: 196px;
+      margin: 26px 0 30px;
+      background: var(--white);
+      padding: 12px 12px 40px;          /* tepi bawah tebal khas polaroid */
+      border: 1px solid rgba(255, 255, 255, .25);
+      box-shadow: 0 18px 44px rgba(10, 22, 40, .45);
+      transform: rotate(-2.5deg);
+      transition: transform .35s ease;
+      position: relative;
+    }
+    .hero-photo:hover { transform: rotate(0deg) scale(1.03); }
+    .hero-photo::before {              /* selotip */
+      content: '';
+      position: absolute;
+      top: -10px; left: 50%;
+      width: 74px; height: 22px;
+      transform: translateX(-50%) rotate(-3deg);
+      background: rgba(125, 156, 189, .45);
+      z-index: 2;
+    }
+    .hero-photo .imgwrap {
+      height: 218px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--blue-pale);
+      overflow: hidden;
+    }
+    .hero-photo.noimg .imgwrap::after { content: '✦'; color: var(--blue-soft); font-size: 2.2rem; }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.92);
+    }
+    .hero-photo .photo-caption {
+      position: absolute;
+      left: 0; right: 0;
+      bottom: 8px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.25rem;
+      color: var(--blue);
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 46px 24px 54px;
+      background: var(--navy);
+      color: var(--blue-pale);
+      font-size: .72rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+    footer .hash { margin-top: 10px; opacity: .55; }
+
+    /* ---------- MODAL ---------- */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(29, 53, 87, .55);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 100; padding: 24px;
+    }
+    .modal-backdrop.hidden { display: none; }
+    .modal {
+      background: var(--white);
+      padding: 46px 36px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid var(--blue-soft);
+    }
+    .modal h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.8rem; letter-spacing: .08em; color: var(--navy); margin-bottom: 12px; }
+    .modal p { font-size: .92rem; font-weight: 300; line-height: 1.9; color: var(--muted); margin-bottom: 26px; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="beranda">
+    <p class="eyebrow">The Seventeenth Birthday Of</p>
+    <div class="rule"></div>
+    <h1><span>ARYA</span>RAI KARNA</h1>
+    <p class="seventeen"></p>
+    <p class="date">Selasa · 10 November 2026</p>
+    <figure class="hero-photo" id="hero-photo" hidden>
+      <div class="imgwrap"><img id="hero-photo-img" alt="Foto Arya" /></div>
+      <figcaption id="hero-photo-cap" class="photo-caption"></figcaption>
+    </figure>
+    <a href="#kata" class="btn">Buka Undangan</a>
+  </header>
+
+  <!-- ============ KATA-KATA ============ -->
+  <section id="kata">
+    <div class="container">
+      <div class="sec-eyebrow">Sepatah Kata</div>
+      <h2>Untukmu yang Tumbuh</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        Tujuh belas tahun bukanlah akhir masa muda, melainkan awal dari perjalanan yang lebih dalam —
+        tentang mimpi yang mulai berani dikejar, tentang jalan yang mulai dipilih sendiri.
+      </p>
+      <div class="quote">
+        “Tumbuhlah menjadi laki-laki yang berani bermimpi, rendah hati dalam sukses, dan teguh dalam melewati badai.
+        Semoga tahun-tahun kepalah bukan sekadar bertambah, tetapi semakin penuh makna ke arah yang lebih baik.”
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DETAIL ACARA ============ -->
+  <section id="acara" class="tint">
+    <div class="container">
+      <div class="sec-eyebrow">Kesaksian Hari Bahagia</div>
+      <h2>Detail Acara</h2>
+      <div class="divider"></div>
+      <div class="details">
+        <div class="detail-card">
+          <b>Selasa, 10 November 2026</b>
+          <span>18.30 WITA — selesai</span>
+        </div>
+        <div class="detail-card">
+          <b>Arya's House</b>
+          <span id="alamat">Jl. Dangin Labak, Singakerta, Ubud, Gianyar, Bali</span>
+        </div>
+        <div class="detail-card">
+          <b>Dress Code</b>
+          <span>Navy · Putih · Biru pastel</span>
+        </div>
+        <div class="center" style="margin-top: 10px;">
+          <a class="btn solid" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sweet+Seventeen+Arya+Rai Karna&dates=20261110T103000Z/20261110T130000Z&details=Sampai+jumpa+di+rumah!&location=Jl.+Dangin+Labak+Singakerta+Ubud+Gianyar" target="_blank" rel="noopener">Simpan Tanggal</a>
+        </div>
+      </div>
+
+      <!-- ====== PETA LOKASI ======
+           Alamat & koordinat peta diisi otomatis dari MAP_QUERY
+           di <script> bawah. Ganti alamat cukup di sana saja. -->
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=  Jl.+Dangin+Labak,+Singakerta,+Ubud,+Gianyar,+Bali&z=15&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Lokasi acara"></iframe>
+      </div>
+      <div class="center" style="margin-top: 18px;">
+        <a id="map-btn" class="btn" href="#" target="_blank" rel="noopener">Buka di Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section id="countdown">
+    <div class="container">
+      <div class="sec-eyebrow">Menuju Hari H</div>
+      <h2>Hitung Waktu</h2>
+      <div class="divider"></div>
+      <div class="countdown">
+        <div class="cd-box"><b id="cd-d">0</b><small>Hari</small></div>
+        <div class="cd-box"><b id="cd-h">0</b><small>Jam</small></div>
+        <div class="cd-box"><b id="cd-m">0</b><small>Menit</small></div>
+        <div class="cd-box"><b id="cd-s">0</b><small>Detik</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section id="rsvp" class="tint">
+    <div class="container">
+      <div class="sec-eyebrow">Konfirmasi Kehadiran</div>
+      <h2>Hadirmu Berarti</h2>
+      <div class="divider"></div>
+      <p class="lead" style="margin-bottom: 30px;">
+        Kehadiranmu di hari istimewa ini adalah hadiah terbaik.
+        Mohon isi konfirmasi di bawah ini.
+      </p>
+      <!-- Ganti href dengan link Sheet jawabanmu (Sheet respons dari Google Form). -->
+      <form id="rsvp-form">
+        <input type="text" id="nama" placeholder="Nama lengkap" required maxlength="40" />
+        <select id="kehadiran" required>
+          <option value="" disabled selected>Kehadiran</option>
+          <option value="yes">Hadir</option>
+          <option value="all">Belum Pasti</option>
+          <option value="no">Tidak</option>
+        </select>
+        <textarea id="pesan" placeholder="Ucapan / pesan untuk yang berulang tahun (opsional)" maxlength="500"></textarea>
+        <button type="submit" class="btn" style="border-color: var(--blue); color: var(--navy);">Kirim Konfirmasi</button>
+        <p class="success-msg" id="success-msg">Terima kasih atas konfirmasinya ✦</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ GUEST LIST ============ -->
+  <section id="tamu">
+    <div class="container">
+      <div class="sec-eyebrow">Yang Telah Mengkonfirmasi</div>
+      <h2>Tamu Terdaftar</h2>
+      <div class="divider"></div>
+      <div class="stats" id="stats"></div>
+      <div class="guest-list" id="guest-list"></div>
+    </div>
+  </section>
+
+  <footer>
+    Sampai jumpa di hari bahagia
+    <div class="hash">#AryaTurns17</div>
+  </footer>
+
+  <!-- ============ MUSIK LATAR ============ -->
+  <audio id="bgm" loop preload="auto"></audio>
+  <button id="music-btn" class="music-btn hidden" aria-label="Putar musik" hidden>♪</button>
+
+  <!-- ============ MODAL UCAPAN ============ -->
+  <div class="modal-backdrop hidden" id="modal">
+    <div class="modal">
+      <h3>Terima Kasih</h3>
+      <p>
+        Konfirmasimu telah kami terima. Sampai jumpa di hari istimewa —
+        jangan lupa kenakan sentuhan navy atau putih pada penampilanmu.
+      </p>
+      <button class="btn solid" style="color: var(--white);" onclick="document.getElementById('modal').classList.add('hidden')">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    /* ====== CONFIG — ganti bagian ini sesuai kebutuhan ====== */
+    const EVENT_NAME   = 'Arya Rai Karna';                             // nama yang berulang tahun
+    const EVENT_DATE   = new Date('2026-11-10T18:30:00+08:00');       // tanggal & jam acara
+    const AGE          = 'ke-17';                                     // umur
+
+    /* ====== LOKASI ACARA (SATU SUMBER, dipakai oleh: kartu alamat, peta, tombol Maps) ======
+       Untuk pin yang 100% PERSIS dengan Google Maps, pakai koordinat 'lat,lng'.
+       Caranya: buka link share-nya di browser, lalu salin angka @lat,lng,zoom
+       di alamat browser. Contoh link share Arya's House:
+       https://maps.app.goo.gl/SDaSqTKmi3vdHs2E9  ->  @-8.5281586,115.2530564,17z */
+    const MAP_QUERY      = '-8.5281586,115.2530564';   // koordinat persis pin lokasi
+    const MAP_ZOOM       = 17;      // tingkat zoom peta (15 = kelurahan, 17 = detail bangunan)
+    const NAMA_LOKASI    = "Arya's House";            // judul kartu alamat
+    const TEKS_ALAMAT    = 'Jl. Dangin Labak, Singakerta, Ubud, Gianyar, Bali'; // isi kartu alamat
+    const MAPS_SHARE_URL = 'https://maps.app.goo.gl/SDaSqTKmi3vdHs2E9'; // link share langsung dari Google Maps (untuk tombol)
+
+    /* ====== MUSIK LATAR ======
+       Letakkan file mp3 di folder yang SAMA dengan index.html
+       (contoh: music.mp3), lalu tulis nama filenya di bawah.
+       Tombol musik muncul otomatis. Tanpa file, tombol disembunyikan. */
+    const MUSIC_SRC = 'music.mp3';   // ex: 'music.mp3' atau 'lagu-aku.mp3'
+
+    /* ====== FOTO HERO (POLAROID UTAMA) ======
+       - file   : nama file foto di folder yang sama dengan index.html
+                  (mis. 'foto-utama.jpg'); bisa subfolder ex: 'foto/aku.jpg'
+                  Kosongkan ('') kalau belum tersedia -> frame disembunyikan.
+       - caption: tulisan tangan di tepi bawah polaroid
+       Idealnya foto potret (vertikal), min. 500x600 px, potongan rata tengah */
+    const FEATURE_PHOTO = { file: 'foto1.jpg', caption: 'Arya · 17' };
+
+    (function initHeroPhoto() {
+      const fig = document.getElementById('hero-photo');
+      const img = document.getElementById('hero-photo-img');
+      const cap = document.getElementById('hero-photo-cap');
+      if (!fig || !img) return;
+      const f = (FEATURE_PHOTO.file || '').trim();
+      if (!f) { fig.hidden = true; return; }
+      fig.hidden = false;
+      cap.textContent = FEATURE_PHOTO.caption || '';
+      img.addEventListener('error', () => { img.remove(); fig.classList.add('noimg'); });
+      img.src = f;
+    })();
+
+    /* Sinkronkan semua elemen lokasi dari sumber di atas */
+    (function syncLokasi() {
+      const mapFrame = document.querySelector('.map-frame iframe');
+      const mapBtn   = document.getElementById('map-btn');
+      const alamat   = document.getElementById('alamat');
+      if (mapFrame) mapFrame.src = 'https://maps.google.com/maps?q=' + encodeURIComponent(MAP_QUERY) + '&z=' + MAP_ZOOM + '&output=embed';
+      if (mapBtn)   mapBtn.href = MAPS_SHARE_URL;
+      if (alamat)   alamat.textContent = TEKS_ALAMAT;
+    })();
+
+    /* ====== KONEKSI GOOGLE FORMS (sudah terhubung) ======
+       Form: RSVP -> pertanyaan "Nama" (web), "Kehadiran" (Hadir/Mungkin/Tidak),
+       dan "Pesan/Ucapan". Tiga nilai di bawah diambil dari link pre-filled. */
+    const FORM_RESPONSE_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfcb1tusmBJOBBmJrS4XtHrkOpqPrg_Gs5xm4R9THPO35WKaQ/formResponse';
+    const ENTRY_NAME        = 'entry.1498135098';   // pertanyaan "Nama"
+    const ENTRY_ATTEND      = 'entry.877086558';    // pertanyaan "Kehadiran"
+    const ENTRY_PESAN       = 'entry.2606285';      // pertanyaan "Pesan/Ucapan"
+
+    /* PENTING: nilai di bawah harus SAMA PERSIS dengan opsi di Google Form:
+       "Hadir/Tidak?" (Multiple choice): Hadir / Belum Pasti / Tidak */
+    const FORM_LABELS = { yes: 'Hadir', all: 'Belum Pasti', no: 'Tidak' };
+
+    /* Daftar tamu awal (data palsu). RSVP dari form akan ditambahkan di sini. */
+    let guests = [];
+
+    /* ====== MUSIK LATAR (kontrol tombol & autoplay saat interaksi pertama) ====== */
+    (function initMusic() {
+      const bgm  = document.getElementById('bgm');
+      const mbtn = document.getElementById('music-btn');
+      if (!bgm || !mbtn || !MUSIC_SRC || MUSIC_SRC.startsWith('GANTI_')) return;
+      bgm.src = MUSIC_SRC;
+      bgm.addEventListener('error', () => { mbtn.hidden = true; });   // file tidak ada -> tombol disembunyikan
+      bgm.addEventListener('canplay', () => { mbtn.hidden = false; });
+      function setUI(on) {
+        mbtn.classList.toggle('playing', on);
+        mbtn.textContent = on ? '❚❚' : '♪';
+      }
+      function toggle() { bgm.paused ? bgm.play() : bgm.pause(); }
+      bgm.addEventListener('play',  () => setUI(true));
+      bgm.addEventListener('pause', () => setUI(false));
+      mbtn.addEventListener('click', toggle);
+      /* Autoplay: browser baru mengizinkan setelah pengunjung berinteraksi,
+         jadi kita coba mainkan sekali pada klik/sentuh pertama */
+      const tryStart = () => { if (bgm.paused) { bgm.play().catch(() => {}); } };
+      tryStart();                                                        // dicoba langsung
+      document.addEventListener('pointerdown', tryStart, { once: true }); // fallback klik pertama
+    })();
+
+    /* ====== COUNTDOWN ====== */
+    function tickCountdown() {
+      const diff = EVENT_DATE - new Date();
+      const d = document.getElementById('cd-d'),
+            h = document.getElementById('cd-h'),
+            m = document.getElementById('cd-m'),
+            s = document.getElementById('cd-s');
+      if (d) d.textContent = Math.max(0, Math.floor(diff / 86400000));
+      if (h) h.textContent = Math.max(0, Math.floor(diff / 3600000) % 24);
+      if (m) m.textContent = Math.max(0, Math.floor(diff / 60000) % 60);
+      if (s) s.textContent = Math.max(0, Math.floor(diff / 1000) % 60);
+    }
+    tickCountdown();
+    setInterval(tickCountdown, 1000);
+
+    /* ====== DAFTAR TAMU ====== */
+    const badgeMap = {
+      yes: { text: 'Hadir', cls: '' },
+      all: { text: 'Belum Pasti', cls: 'all' },
+      no:  { text: 'Tak Hadir', cls: 'no' },
+    };
+
+    function renderGuests() {
+      const list = document.getElementById('guest-list');
+      const stats = document.getElementById('stats');
+      list.innerHTML = '';
+      if (!guests.length) {
+        list.innerHTML = '<p class="empty">Belum ada yang mengkonfirmasi ✦</p>';
+        return;
+      }
+      guests.forEach(g => {
+        const b = badgeMap[g.hadir] || badgeMap.all;
+        const el = document.createElement('div');
+        el.className = 'guest';
+        el.innerHTML =
+          '<span class="name">' + g.nama.replace(/</g, '&lt;') + '</span>' +
+          '<span class="badge ' + b.cls + '">' + b.text + '</span>';
+        list.appendChild(el);
+      });
+      const yes = guests.filter(g => g.hadir === 'yes').length;
+      const maybe = guests.filter(g => g.hadir === 'all').length;
+      stats.innerHTML =
+        '<span class="stat"><b>' + yes + '</b>Hadir</span>' +
+        '<span class="stat"><b>' + maybe + '</b>Belum Pasti</span>' +
+        '<span class="stat"><b>' + guests.length + '</b>Total</span>';
+    }
+    renderGuests();
+
+    /* ====== SUBMIT RSVP ======
+       - Jawaban dikirim ke Google Form (kalau FORM_RESPONSE_URL sudah diisi)
+       - Sekaligus disimpan di localStorage sebagai cadangan lokal */
+    document.getElementById('rsvp-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const nama  = document.getElementById('nama').value.trim();
+      const hadir = document.getElementById('kehadiran').value;
+      const pesan = document.getElementById('pesan').value.trim();
+      if (!nama || !hadir) return;
+
+      guests.unshift({ nama, hadir });
+      this.reset();
+      document.getElementById('success-msg').style.display = 'block';
+      setTimeout(() => { document.getElementById('success-msg').style.display = 'none'; }, 4000);
+      if (hadir === 'yes' || hadir === 'all') {
+        document.getElementById('modal').classList.remove('hidden');
+      }
+      renderGuests();
+
+      try { localStorage.setItem('ulth-guests', JSON.stringify(guests)); } catch (err) {}
+
+      /* Kirim ke Google Forms */
+      if (!FORM_RESPONSE_URL.startsWith('GANTI_')) {
+        const data = new URLSearchParams();
+        data.set(ENTRY_NAME, nama);
+        data.set(ENTRY_ATTEND, FORM_LABELS[hadir]);
+        if (pesan && ENTRY_PESAN) data.set(ENTRY_PESAN, pesan);
+        try {
+          await fetch(FORM_RESPONSE_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: data.toString(),
+          });
+        } catch (err) {
+          console.warn('Gagal kirim ke Google Forms:', err);
+        }
+      }
+    });
+
+    /* Muat RSVP yang pernah di-submit dari perangkat ini */
+    try {
+      const saved = JSON.parse(localStorage.getItem('ulth-guests'));
+      if (Array.isArray(saved) && saved.length) {
+        const seedNames = new Set(guests.map(g => g.nama.toLowerCase()));
+        guests = saved.filter(g => g && g.nama && !seedNames.has(g.nama.toLowerCase()));
+        renderGuests();
+      }
+    } catch (err) {}
+  </script>
+</body>
+</html>
