@@ -63,6 +63,26 @@
       font-weight: 400;
       color: var(--blue-pale);
       opacity: .85;
+      margin: 0 0 6px;
+    }
+    .salutation {
+      margin-bottom: 22px;
+      font-size: .72rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--blue-pale);
+      opacity: .9;
+      line-height: 2;
+    }
+    .salutation b {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.15rem;
+      letter-spacing: .12em;
+      text-transform: none;
+      color: var(--white);
+      margin-top: 2px;
     }
     .hero .rule {
       width: 1px; height: 56px; background: var(--blue-soft); opacity: .6; margin: 26px 0;
@@ -382,6 +402,72 @@
       line-height: 1.1;
     }
 
+    /* ---------- AMPLOP DIGITAL (TANDA KASIH) ---------- */
+    .gift-toggle-wrap { text-align: center; margin-top: 6px; }
+    #gift-box { max-width: 520px; margin: 34px auto 0; }
+    .amplops { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .amplop {
+      flex: 1 1 240px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 24px 22px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .amplop::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 46px; height: 2px;
+      background: var(--blue-soft);
+      opacity: .55;
+    }
+    .amplop .bank {
+      font-size: .72rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--blue-soft);
+      margin-bottom: 10px;
+    }
+    .amplop .nomor {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+    .amplop .atas {
+      font-size: .8rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .copy-btn {
+      font-family: inherit;
+      font-size: .68rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--blue);
+      cursor: pointer;
+      transition: .2s;
+    }
+    .copy-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .qris {
+      margin-top: 14px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 18px;
+      text-align: center;
+    }
+    .qris img { display: block; margin: 0 auto 10px; width: 210px; height: auto; }
+    .qris .bank { margin-bottom: 0; }
+
     footer {
       text-align: center;
       padding: 46px 24px 54px;
@@ -412,12 +498,40 @@
     }
     .modal h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.8rem; letter-spacing: .08em; color: var(--navy); margin-bottom: 12px; }
     .modal p { font-size: .92rem; font-weight: 300; line-height: 1.9; color: var(--muted); margin-bottom: 26px; }
+
+    /* ---------- NOTICE (peringatan kontras di dalam modal) ---------- */
+    .modal .notice {
+      background: var(--navy);
+      color: var(--blue-pale);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      font-size: .82rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      line-height: 1.9;
+      box-shadow: inset 0 0 0 1px rgba(125, 156, 189, .35);
+    }
+    .modal .notice b { display: block; color: var(--white); font-size: .92rem; font-weight: 500; letter-spacing: .18em; margin-bottom: 6px; }
+    .modal .notice em {
+      display: block;
+      text-transform: none;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: .03em;
+      font-size: .82rem;
+      color: var(--blue-soft);
+      margin-top: 6px;
+      border-top: 1px solid rgba(125, 156, 189, .3);
+      padding-top: 8px;
+    }
   </style>
 </head>
 <body>
 
   <!-- ============ HERO ============ -->
   <header class="hero" id="beranda">
+    <p class="salutation" id="salutation" hidden>Kepada Yth.<b id="salutation-name"></b></p>
     <p class="eyebrow">The Seventeenth Birthday Of</p>
     <div class="rule"></div>
     <h1><span>ARYA</span>RAI KARNA</h1>
@@ -434,15 +548,13 @@
   <section id="kata">
     <div class="container">
       <div class="sec-eyebrow">Sepatah Kata</div>
-      <h2>Untukmu yang Tumbuh</h2>
+      <h2>Ucapan Cinta</h2>
       <div class="divider"></div>
       <p class="lead">
-        Tujuh belas tahun bukanlah akhir masa muda, melainkan awal dari perjalanan yang lebih dalam —
-        tentang mimpi yang mulai berani dikejar, tentang jalan yang mulai dipilih sendiri.
+      
       </p>
       <div class="quote">
-        “Tumbuhlah menjadi laki-laki yang berani bermimpi, rendah hati dalam sukses, dan teguh dalam melewati badai.
-        Semoga tahun-tahun kepalah bukan sekadar bertambah, tetapi semakin penuh makna ke arah yang lebih baik.”
+        “happy sweet 17th, sayangg ! terimakasii yaa udaa hadirr dii hidupp akuu, semogaa dii umurr 17 inii semuaa impiann kamuu satuu perr satuu bisaa terwujudd, selaluu dikelilinginn hall hall baikk, dann makinn betahh samaa akuu. intinyaa akuu sayangg bangett samaa kamuuu ♡.” - Luh Ade
       </div>
     </div>
   </section>
@@ -465,6 +577,10 @@
         <div class="detail-card">
           <b>Dress Code</b>
           <span>Navy · Putih · Biru pastel</span>
+        </div>
+        <div class="detail-card">
+          <b>Area Bebas Rokok</b>
+          <span>Mohon tidak merokok selama acara berlangsung</span>
         </div>
         <div class="center" style="margin-top: 10px;">
           <a class="btn solid" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sweet+Seventeen+Arya+Rai Karna&dates=20261110T103000Z/20261110T130000Z&details=Sampai+jumpa+di+rumah!&location=Jl.+Dangin+Labak+Singakerta+Ubud+Gianyar" target="_blank" rel="noopener">Simpan Tanggal</a>
@@ -540,6 +656,23 @@
     </div>
   </section>
 
+  <!-- ============ AMPLOP DIGITAL (TANDA KASIH) ============ -->
+  <section id="hadiah" class="tint">
+    <div class="container">
+      <div class="sec-eyebrow">Tanda Kasih</div>
+      <h2>Amplop Digital</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        Kehadiranmu di tengah keluarga adalah hadiah terindah.
+        Namun jika ingin memberikan tanda kasih, dapat melalui kanal di bawah ini.
+      </p>
+      <div class="gift-toggle-wrap">
+        <button id="gift-toggle" class="btn solid">Buka Amplop</button>
+      </div>
+      <div id="gift-box" hidden></div>
+    </div>
+  </section>
+
   <footer>
     Sampai jumpa di hari bahagia
     <div class="hash">#AryaTurns17</div>
@@ -557,6 +690,12 @@
         Konfirmasimu telah kami terima. Sampai jumpa di hari istimewa —
         jangan lupa kenakan sentuhan navy atau putih pada penampilanmu.
       </p>
+      <div class="notice">
+        <b>🚭 Tidak Untuk Merokok</b>
+        Area acara ini bebas rokok.
+        <em>Vape diperbolehkan, dengan intensitas rendah.
+        Terima kasih atas pengertiannya 🙏</em>
+      </div>
       <button class="btn solid" style="color: var(--white);" onclick="document.getElementById('modal').classList.add('hidden')">Tutup</button>
     </div>
   </div>
@@ -590,7 +729,93 @@
                   Kosongkan ('') kalau belum tersedia -> frame disembunyikan.
        - caption: tulisan tangan di tepi bawah polaroid
        Idealnya foto potret (vertikal), min. 500x600 px, potongan rata tengah */
-    const FEATURE_PHOTO = { file: 'foto1.jpg', caption: 'Arya · 17' };
+    const FEATURE_PHOTO = { file: 'foto1.JPG', caption: 'Arya · 17' };  // HURUF CAPITAL (uppercase) harus sama persis dengan nama file.
+
+    /* ====== AMPLOP DIGITAL (TANDA KASIH) ======
+       Isi nomor rekening ASLI di sini (sekarang masih data palsu).
+       - bank : nama tampilan, mis. 'BCA', 'DANA', 'GoPay', 'ShopeePay'
+       - nomor: nomor rekening / HP e-wallet
+       - atas : nama pemilik rekening
+       QRIS   : letakkan gambar QRIS bernama 'qris.png' di folder yang sama;
+                kalau filenya tidak ada, kartunya disembunyikan otomatis. */
+    const GIFTS = [
+      { bank: 'BCA',  nomor: '1350934088',  atas: 'a.n. I Nyoman Arya Rai Karna' },
+    ];
+    const QRIS_FILE = 'qris.png';
+
+    (function initAmplop() {
+      const box = document.getElementById('gift-box');
+      const btn = document.getElementById('gift-toggle');
+      if (!box || !btn) return;
+
+      /* Kartu rekening */
+      GIFTS.forEach(g => {
+        const card = document.createElement('div');
+        card.className = 'amplop';
+        card.innerHTML =
+          '<div class="bank">' + g.bank.replace(/</g, '&lt;') + '</div>' +
+          '<div class="nomor">' + g.nomor.replace(/</g, '&lt;') + '</div>' +
+          '<div class="atas">' + g.atas.replace(/</g, '&lt;') + '</div>' +
+          '<button type="button" class="copy-btn" data-copy="' + g.nomor.replace(/"/g, '&quot;') + '">Salin Nomor</button>';
+        box.appendChild(card);
+      });
+
+      /* Kartu QRIS (hanya tampil kalau filenya ada) */
+      if (QRIS_FILE) {
+        const qr = document.createElement('div');
+        qr.className = 'qris';
+        const img = document.createElement('img');
+        img.alt = 'QRIS';
+        img.hidden = true;
+        img.addEventListener('load', function () {
+          if (this.naturalWidth > 1) { img.hidden = false; qr.hidden = false; }
+        });
+        img.addEventListener('error', function () { qr.remove(); });
+        img.src = QRIS_FILE;
+        const label = document.createElement('div');
+        label.className = 'bank';
+        label.textContent = 'Scan QRIS · Semua Aplikasi';
+        qr.appendChild(img);
+        qr.appendChild(label);
+        box.appendChild(qr);
+        qr.hidden = true;
+      }
+
+      /* Tombol buka/tutup amplop */
+      btn.addEventListener('click', () => {
+        const open = box.hidden;
+        box.hidden = !open;
+        btn.textContent = open ? 'Tutup Amplop' : 'Buka Amplop';
+        if (open) box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+
+      /* Tombol salin nomor */
+      box.addEventListener('click', (e) => {
+        const b = e.target.closest('.copy-btn');
+        if (!b) return;
+        const text = b.getAttribute('data-copy');
+        const done = () => {
+          const old = 'Salin Nomor';
+          b.textContent = '✦ Tersalin';
+          setTimeout(() => { b.textContent = old; }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+        } else {
+          fallbackCopy(text, done);
+        }
+      });
+      function fallbackCopy(text, cb) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); cb(); } catch (err) {}
+        ta.remove();
+      }
+    })();
 
     (function initHeroPhoto() {
       const fig = document.getElementById('hero-photo');
@@ -603,6 +828,22 @@
       cap.textContent = FEATURE_PHOTO.caption || '';
       img.addEventListener('error', () => { img.remove(); fig.classList.add('noimg'); });
       img.src = f;
+    })();
+
+    /* ====== SAPAAN TAMU VIA LINK (?to=Nama) ======
+       Contoh link personal: https://undangan-arya.vercel.app/?to=Budi%20Pratama
+       Tanpa ?to=, sapaan disembunyikan dan tampilan tetap normal.
+       Nama yang dibawa link juga mengisi otomatis form RSVP (tetap bisa diedit). */
+    (function initSalutation() {
+      const p = new URLSearchParams(location.search);
+      const nama = (p.get('to') || '').trim().slice(0, 40);
+      if (!nama) return;
+      const salut = document.getElementById('salutation');
+      const slot  = document.getElementById('salutation-name');
+      if (slot) slot.textContent = nama;
+      if (salut) salut.hidden = false;
+      const input = document.getElementById('nama');
+      if (input && !input.value) input.value = nama;
     })();
 
     /* Sinkronkan semua elemen lokasi dari sumber di atas */
@@ -715,9 +956,8 @@
       this.reset();
       document.getElementById('success-msg').style.display = 'block';
       setTimeout(() => { document.getElementById('success-msg').style.display = 'none'; }, 4000);
-      if (hadir === 'yes' || hadir === 'all') {
-        document.getElementById('modal').classList.remove('hidden');
-      }
+      /* Modal ditampilkan untuk SEMUA respons agar notice bebas rokok terbaca */
+      document.getElementById('modal').classList.remove('hidden');
       renderGuests();
 
       try { localStorage.setItem('ulth-guests', JSON.stringify(guests)); } catch (err) {}
